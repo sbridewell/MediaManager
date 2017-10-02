@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaManager", "MediaManager\MediaManager.csproj", "{09DAF3C8-1E56-4FEC-89B0-BB600359B898}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaManager.Mvc", "MediaManager.Mvc\MediaManager.Mvc.csproj", "{F15552F5-2F9A-404B-8389-633298573E83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaManager.MvcViewModels", "MediaManager.MvcViewModels\MediaManager.MvcViewModels.csproj", "{63123335-AB7A-4619-BCFF-0FFF268E1D73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{AFC0FB8D-8799-4133-A6FD-503019E7F159}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{80AC151E-1B3C-4E82-A315-C6A2175540C6}"
+	ProjectSection(SolutionItems) = preProject
+		CreateDatabase.sql = CreateDatabase.sql
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulateDatabase", "PopulateDatabase\PopulateDatabase.csproj", "{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaManager.Mvc.UnitTests", "MediaManager.Mvc.UnitTests\MediaManager.Mvc.UnitTests.csproj", "{EF89908B-F629-4E6B-B3DA-41D291510589}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09DAF3C8-1E56-4FEC-89B0-BB600359B898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09DAF3C8-1E56-4FEC-89B0-BB600359B898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09DAF3C8-1E56-4FEC-89B0-BB600359B898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09DAF3C8-1E56-4FEC-89B0-BB600359B898}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F15552F5-2F9A-404B-8389-633298573E83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F15552F5-2F9A-404B-8389-633298573E83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F15552F5-2F9A-404B-8389-633298573E83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F15552F5-2F9A-404B-8389-633298573E83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63123335-AB7A-4619-BCFF-0FFF268E1D73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63123335-AB7A-4619-BCFF-0FFF268E1D73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63123335-AB7A-4619-BCFF-0FFF268E1D73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63123335-AB7A-4619-BCFF-0FFF268E1D73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFC0FB8D-8799-4133-A6FD-503019E7F159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFC0FB8D-8799-4133-A6FD-503019E7F159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFC0FB8D-8799-4133-A6FD-503019E7F159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFC0FB8D-8799-4133-A6FD-503019E7F159}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF89908B-F629-4E6B-B3DA-41D291510589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF89908B-F629-4E6B-B3DA-41D291510589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF89908B-F629-4E6B-B3DA-41D291510589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF89908B-F629-4E6B-B3DA-41D291510589}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2270F647-5B0A-46F2-987F-4DBAEE9FBC67}
+	EndGlobalSection
+EndGlobal

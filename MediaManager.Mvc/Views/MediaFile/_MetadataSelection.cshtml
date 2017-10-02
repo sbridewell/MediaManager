@@ -1,0 +1,19 @@
+﻿@using MediaManager.MvcViewModels
+@model ListMediaFilesViewModel
+
+@using (Html.BeginForm())
+{
+    @* this form should do a post, and is doing so, works OK *@
+    foreach (KeyValuePair<string, bool> kv in Model.MetadataSelections)
+    {
+        @*@Html.CheckBox(kv.Key, kv.Value)*@
+        @*
+            using CheckBoxFor ensures that the value of the CheckBox is bound to the view model
+            and therefore returned to the view by the controller's action method
+        *@
+        @Html.CheckBoxFor(m => m.MetadataSelections[kv.Key])
+        <label>@kv.Key</label>
+    }
+
+    <input type="submit" value="Update metadata items to be displayed" />
+}

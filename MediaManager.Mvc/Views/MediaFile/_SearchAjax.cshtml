@@ -1,0 +1,21 @@
+﻿@using MediaManager.MvcViewModels
+@model ListMediaFilesViewModel
+
+@*@using (Html.BeginForm())*@
+@using (Ajax.BeginForm(
+    @*
+        this form should do a get but is doing a post, causes nullreferenceexception
+        when trying to access Model.MetadataSelections in other form
+    *@
+                new AjaxOptions
+                {
+                    HttpMethod = "get",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "mediaFileList"
+                }))
+{
+
+    @Html.EditorFor(m => m.SearchTerm)
+    <!--<input type="search" name="searchTerm" />-->
+    <input type="submit" value="Search" />
+}

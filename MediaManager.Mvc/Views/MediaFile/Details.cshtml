@@ -1,0 +1,32 @@
+﻿@using SDE.MediaManager
+@model MediaFile
+
+<div>
+    @Html.DisplayNameFor(model => model.FileName)
+    @Html.DisplayFor(model => model.FileName)
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.Folder)
+    @Html.DisplayFor(model => model.Folder)
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.SizeInBytes)
+    @Html.DisplayFor(model => model.SizeInBytes)
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.CreatedTimestamp)
+    @Html.DisplayFor(model => model.CreatedTimestamp)
+</div>
+<div>
+    @Html.DisplayNameFor(model => model.ModifiedTimestamp)
+    @Html.DisplayFor(model => model.ModifiedTimestamp)
+</div>
+<table>
+    @foreach (var meta in Model.Metadata)
+    {
+        <tr>
+            <td>@meta.Name</td>
+            <td>@meta.Value</td>
+        </tr>
+    }
+</table>

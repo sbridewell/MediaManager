@@ -1,0 +1,33 @@
+﻿How to support lazy loading of collection properties:
+
+Example: a PodcastChannel has a collection of PodcastEpisodes.
+
+public class PodcastChannel
+{
+    public virtual ICollection<PodcastEpisode> Episodes { get; private set; }
+}
+
+public class PodcastEpisode
+{
+    [ForeignKey("PodcastChannel")]
+    public int ChannelId { get; set; }
+    public PodcastChannel PodcastChannel { get; set; }
+}
+
+1) The collection property of the PodcastChannel must be virtual otherwise EF can't create an override property to lazy load it and doesn't touch the property
+
+2) The PodcastEpisode class must have a property for the ID of the channel it belongs to
+
+2a) This property must be decorated with a ForeignKeyAttribute with the name of the table containing the channels, otherwise EF will try to add it as a new column to the PodcastEpisode table (which will probably fail)
+
+3) The PodcastEpisode class must have a property for the instance of the channel it belongs to, otherwise a runtime error occurs: 
+    The ForeignKeyAttribute on property 'ChannelId' on type 'SDE.MediaManager.PodcastEpisode' is not valid. 
+    The navigation property 'PodcastChannel' was not found on the dependent type 'SDE.MediaManager.PodcastEpisode'. 
+    The Name value should be a valid navigation property name.
+
+3a) This property must have the same name as its type, otherwise a runtime error occurs:
+    The ForeignKeyAttribute on property 'ChannelId' on type 'SDE.MediaManager.PodcastEpisode' is not valid. 
+    The navigation property 'PodcastChannel' was not found on the dependent type 'SDE.MediaManager.PodcastEpisode'. 
+    The Name value should be a valid navigation property name.
+
+4) The DbContext's Configuration.LazyLoadingEnabled property must be set to true, otherwise lazy loading isn't attempted

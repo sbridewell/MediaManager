@@ -1,0 +1,10 @@
+﻿@using MediaManager.MvcViewModels
+@model ListMediaFilesViewModel
+
+@*
+    @Html.Partial("_MetadataSelection")
+    @Html.Partial("_SearchAjax")
+*@
+@Html.Partial("_SearchPost")
+@Html.Partial("_MediaFiles", Model)
+

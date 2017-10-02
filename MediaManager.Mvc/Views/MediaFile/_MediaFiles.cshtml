@@ -1,0 +1,85 @@
+﻿@using MediaManager.MvcViewModels
+@using SDE.MediaManager
+@using PagedList.Mvc
+@model ListMediaFilesViewModel
+@{ 
+    // Load the media files into memory so that DataReader can be closed before we
+    // later need to iterate through each file's metadata
+    var mediaFiles = Model.MediaFiles.ToList();
+}
+<div class="pagedList">
+    @*
+        The name of the variable pageNumber passed to the Url.Action method below
+        needs to be the same as the name of the corresponding parameter in the
+        action method being called.
+        Note the extra parameter searchTerm added to the Url.Action call.
+        Without this, when navigating to another page of a list of search results,
+        the search term would be cleared and we'd go instead to that page of all
+        the files in the data store.
+    *@
+    @Html.PagedListPager(
+               Model.MediaFiles,
+               pageNumber => Url.Action("Index", new { pageNumber, searchTerm = Model.SearchTerm }),
+               PagedListRenderOptions.MinimalWithItemCountText)
+</div>
+
+<div id = "mediaFileList">
+    <table>
+        @* First table row contains column headings with the name of each metadata item *@
+        <tr>
+        @foreach (var kv in Model.ShowMetadata)
+        {
+            // Does the user want to display the metadata items with this name?
+            if (kv.Value)
+            {
+                <th>@kv.Key</th>
+            }
+        }
+        </tr>
+
+        @foreach (var file in mediaFiles)
+        {
+            <tr>
+                @*
+                    We could iterate through the file's Metadata property here, and the
+                    syntax for what we display would be simpler, but this way we guarantee
+                    that the metadata items for every file are displayed in the same order,
+                    even if they're held in a different order in the database.
+                *@
+                @foreach (var kv in Model.ShowMetadata)
+                {
+                    // Does the user want to display the metadata item with this name?
+                    if (kv.Value)
+                    {
+                        string metadataValue = string.Empty;
+                        var meta = file.Metadata.Where(m => m.Name == kv.Key);
+
+                        // Does this file actually have a metadata item with this name?
+                        // If we don't check this before trying to output its value then
+                        // we get a "sequence contains no elements" exception.
+                        if (meta.Any())
+                        {
+                            metadataValue = meta.FirstOrDefault().Value;
+                        }
+
+                        <td>@metadataValue</td>
+                    }
+                }
+
+                <td>@Html.ActionLink("Details", "Details", new { file.Id }, null)</td>
+
+                @*
+                    This is the simpler way of displaying the metadata values...
+                @foreach (var meta in file.Metadata)
+                {
+                    if (Model.MetadataSelections[meta.Name])
+                    {
+                        <td>
+                            @meta.Value
+                        </td>
+                    }
+                }*@
+            </tr>
+        }
+    </table>
+</div>

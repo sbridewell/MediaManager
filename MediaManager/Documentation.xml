@@ -1,0 +1,21 @@
+﻿<?xml version="1.0"?>
+<doc>
+    <member name="MediaFile.Id">
+        <summary>Gets the primary key of this <see cref="MediaFile"/> in the database.</summary>
+    </member>
+    <member name="MediaFile.FileName">
+        <summary>Gets or sets the name of the file, without the path.</summary>
+    </member>
+    <member name="MediaFile.Folder">
+        <summary>Gets or sets the path to the folder which contains the file.</summary>
+    </member>
+    <member name="MediaFile.SizeInBytes">
+        <summary>Gets or sets the size of the file in bytes.</summary>
+    </member>
+    <member name="MediaFile.CreatedTimestamp">
+        <summary>Gets or sets the date and time the file was created.</summary>
+    </member>
+    <member name="MediaFile.ModifiedTimestamp">
+        <summary>Gets or sets the date and time the file was modified.</summary>
+    </member>
+</doc>
