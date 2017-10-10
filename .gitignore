@@ -3,3 +3,36 @@
 ################################################################################
 
 /Console.Framework
+/Console.Framework.UnitTests
+/Console.Runners
+/Console.Runners.UnitTests
+/Console.TestApplication
+/MediaManager old version without EF
+/MediaManager.ConsoleApplication
+/MediaManager.SqlClient
+/MediaManager.UnitTests
+/MediaManager.ViewModels
+/MediaManager.ViewModels.UnitTests
+/MediaManager.WinForms
+/MediaManager.WPF
+/MediaManager.Wpf.UnitTests
+/MvvmFramework
+/MvvmFramework.UnitTests
+/Numbers
+/Numbers.UnitTests
+/Numbers.Wpf
+/packages
+/Shared
+/Utility.UnitTests
+/VlcConsole
+/VlcConsole.UnitTests
+/VlcService
+/WindowsPortableDevice.ConsoleApp
+/WpfConverters
+/WpfConverters.UnitTests
+/MediaManager.sln
+/Example podcast xml doc (above & beyond).xml
+/MediaManager.xlsx
+/~$MediaManager.xlsx
+/.vs/MediaManager.Mvc.VS2017/v15/sqlite3
+/.vs

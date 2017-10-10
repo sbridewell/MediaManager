@@ -21,7 +21,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @* 
+                    The parameters for this overlolad of Url.Action are action name 
+                    and then controller name 
+                *@
+                <a href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/images/NoImage.png" />
+                </a>
+                @* Keeping this here for now as we might want to style the image which replaces it like this *@
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
