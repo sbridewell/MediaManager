@@ -13,12 +13,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{80AC151E-1B3C-4E82-A315-C6A2175540C6}"
 	ProjectSection(SolutionItems) = preProject
+		stuff\BGM.zip = stuff\BGM.zip
 		CreateDatabase.sql = CreateDatabase.sql
+		stuff\Pluralsight course notes.docx = stuff\Pluralsight course notes.docx
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopulateDatabase", "PopulateDatabase\PopulateDatabase.csproj", "{2E9D3AD4-3C47-40FF-8CF4-CC2040C1FE29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaManager.Mvc.UnitTests", "MediaManager.Mvc.UnitTests\MediaManager.Mvc.UnitTests.csproj", "{EF89908B-F629-4E6B-B3DA-41D291510589}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{8D1AA712-87E5-43D5-9804-DFF627815F85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +57,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8D1AA712-87E5-43D5-9804-DFF627815F85} = {80AC151E-1B3C-4E82-A315-C6A2175540C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2270F647-5B0A-46F2-987F-4DBAEE9FBC67}
