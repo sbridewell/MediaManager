@@ -258,9 +258,11 @@
     <Content Include="Views\MediaFile\_MetadataSelection.cshtml" />
     <Content Include="Views\MediaFile\_SearchAjax.cshtml" />
     <Content Include="Views\MediaFile\_SearchPost.cshtml" />
+    <Content Include="Views\MediaFile\_SearchBox.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Media\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

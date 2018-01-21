@@ -111,8 +111,16 @@ namespace MediaManager.Mvc.Controllers
         /// <returns>A view showing the details of the file.</returns>
         public ActionResult Details(int id)
         {
-            // TODO: Add a media player to the Details view
+            // TODO: Now we're copying media files to a cache folder within the application, we need a way of housekeeping them
             var model = _dataSource.Query<MediaFile>().Single(f => f.Id == id);
+            var appFolder = Request.PhysicalApplicationPath;
+            var localCacheFileName = System.IO.Path.GetFullPath(appFolder + @"Content\Media\" + model.FileName);
+            ViewBag.CacheFileName = "/Content/Media/" + model.FileName;
+            if (!System.IO.File.Exists(localCacheFileName))
+            {
+                System.IO.File.Copy(model.FullFileName, localCacheFileName);
+            }
+
             return View(model);
         }
         #endregion

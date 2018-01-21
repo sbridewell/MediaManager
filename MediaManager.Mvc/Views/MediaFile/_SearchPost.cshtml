@@ -4,20 +4,23 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    foreach (KeyValuePair<string, bool> kv in Model.ShowMetadata)
-    {
-        @*@Html.CheckBox(kv.Key, kv.Value)*@
-        @*
-            using CheckBoxFor ensures that the value of the CheckBox is bound to the view model
-            and therefore returned by the view to the controller's action method
-        *@
-        @Html.CheckBoxFor(m => m.ShowMetadata[kv.Key])
-        <label>@kv.Key</label>
-    }
+    <div class="panel panel-default">
+        @foreach (KeyValuePair<string, bool> kv in Model.ShowMetadata)
+        {
+            @*@Html.CheckBox(kv.Key, kv.Value)*@
+            @*
+                using CheckBoxFor ensures that the value of the CheckBox is bound to the view model
+                and therefore returned by the view to the controller's action method
+            *@
+            @Html.CheckBoxFor(m => m.ShowMetadata[kv.Key])
+            <label>@kv.Key</label>
+            <br />
+        }
 
-    @Html.EditorFor(m => m.SearchTerm)
-    @*@Html.HiddenFor(m => m.PageNumber)*@
-    @Html.HiddenFor(m => m.IsInitialized)
-    <input type="submit" value="Search" />
+        @Html.EditorFor(m => m.SearchTerm, new { htmlAttributes = new { @class = "form-control" } })
+        @*@Html.HiddenFor(m => m.PageNumber)*@
+        @Html.HiddenFor(m => m.IsInitialized)
+        <input type="submit" value="Search" class="btn btn-default" />
+    </div>
 }
 

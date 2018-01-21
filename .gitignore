@@ -36,3 +36,39 @@
 /~$MediaManager.xlsx
 /.vs/MediaManager.Mvc.VS2017/v15/sqlite3
 /.vs
+MediaManager.Mvc/Views/MediaFile/_searchBox.cshtml
+*.cshtml
+*.cshtml
+MediaManager.Mvc/Content/Media/06 Please Just Take These Photos Fro.m4a
+MediaManager.Mvc/Content/Media/an evening with tuchet worm final ed.mp3
+MediaManager.Mvc/Content/Media/An Evening With Tuchet & Worm Feb 22nd Full Moon Bristol.mp3
+MediaManager.Domain/Attribute.cs
+MediaManager.Domain/ExpectedFolder.cs
+MediaManager.Domain/FileAttribute.cs
+MediaManager.Domain/FileMetadata.cs
+MediaManager.Domain/FileType.cs
+MediaManager.Domain/MediaFile.cs
+MediaManager.Domain/MediaManager.Domain.csproj
+MediaManager.Domain/PodcastChannel.cs
+MediaManager.Domain/PodcastEpisode.cs
+MediaManager.Domain/PossibleValue.cs
+MediaManager.Domain/Properties/AssemblyInfo.cs
+MediaManager.Domain/Settings.cs
+MediaManager.Model/App.config
+MediaManager.Model/MediaManager.Model.csproj
+MediaManager.Model/MediaManagerModel.Designer.cs
+MediaManager.Model/MediaManagerModel.edmx
+MediaManager.Model/MediaManagerModel.edmx.diagram
+MediaManager.Model/packages.config
+MediaManager.Model/Properties/AssemblyInfo.cs
+MediaManager.Mvc/Controllers/MediaFileController.cs
+MediaManager.Mvc/Controllers/MediaFileController.cs
+MediaManager.Mvc/MediaManager.Mvc.csproj
+MediaManager.Mvc/MediaManager.Mvc.csproj.user
+MediaManager.Mvc/Views/MediaFile/_MediaFiles.cshtml
+MediaManager.Mvc/Views/MediaFile/_MetadataSelection.cshtml
+MediaManager.Mvc/Views/MediaFile/_SearchPost.cshtml
+MediaManager/MediaManager.csproj.user
+MediaManager.Mvc/MediaManager.Mvc.csproj
+stuff/Understanding ASP.net core 2.x course notes.docx
+stuff/~$uralsight course notes.docx

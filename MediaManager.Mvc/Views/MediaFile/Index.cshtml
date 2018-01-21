@@ -5,6 +5,13 @@
     @Html.Partial("_MetadataSelection")
     @Html.Partial("_SearchAjax")
 *@
-@Html.Partial("_SearchPost")
-@Html.Partial("_MediaFiles", Model)
-
+@using (Html.BeginForm())
+{
+    <div class="col-md-3">
+        @Html.Partial("_MetadataSelection")
+    </div>
+    <div class="col-md-9">
+        @Html.Partial("_SearchBox")
+        @Html.Partial("_MediaFiles", Model)
+    </div>
+}

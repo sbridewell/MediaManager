@@ -1,27 +1,37 @@
 ﻿@using SDE.MediaManager
 @model MediaFile
 
-<div>
-    @Html.DisplayNameFor(model => model.FileName)
-    @Html.DisplayFor(model => model.FileName)
-</div>
-<div>
-    @Html.DisplayNameFor(model => model.Folder)
-    @Html.DisplayFor(model => model.Folder)
-</div>
-<div>
-    @Html.DisplayNameFor(model => model.SizeInBytes)
-    @Html.DisplayFor(model => model.SizeInBytes)
-</div>
-<div>
-    @Html.DisplayNameFor(model => model.CreatedTimestamp)
-    @Html.DisplayFor(model => model.CreatedTimestamp)
-</div>
-<div>
-    @Html.DisplayNameFor(model => model.ModifiedTimestamp)
-    @Html.DisplayFor(model => model.ModifiedTimestamp)
-</div>
-<table>
+The audio should appear here
+<audio autoplay="true" controls>
+    @*    <source src="file:@Model.FullFileName" type="audio/mpeg" />*@
+    <source src="@ViewBag.CacheFileName" type="audio/mp3" />
+    Your browser does not support the audio player
+</audio>
+
+<table class="table table-bordered table-condensed table-striped">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.FileName)</td>
+        <td>@Html.DisplayFor(model => model.FileName)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Folder)</td>
+        <td>@Html.DisplayFor(model => model.Folder)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.SizeInBytes)</td>
+        @* TODO: make the file size converter common to both the WPF and the MVC projects*@
+        <td>@Html.DisplayFor(model => model.SizeInBytes)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.CreatedTimestamp)</td>
+        <td>@Html.DisplayFor(model => model.CreatedTimestamp)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.ModifiedTimestamp)</td>
+        <td>@Html.DisplayFor(model => model.ModifiedTimestamp)</td>
+    </tr>
+</table>
+<table class="table table-bordered table-striped table-condensed">
     @foreach (var meta in Model.Metadata)
     {
         <tr>
